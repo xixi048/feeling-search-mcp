@@ -1,0 +1,44 @@
+{
+  "name": "feeling-search-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for feeling-search: turn one colloquial sentence into 762 feeling words and 598 visual styles (commercial-grade art reference chart / art-style prompt encyclopedia).",
+  "type": "module",
+  "bin": {
+    "feeling-search-mcp": "bin/cli.mjs"
+  },
+  "files": [
+    "bin/",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node test/smoke.mjs"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server",
+    "art-direction",
+    "visual-style",
+    "art-style-reference",
+    "art-style-encyclopedia",
+    "prompt-encyclopedia",
+    "image-generation",
+    "prompt-engineering",
+    "concept-art",
+    "design"
+  ],
+  "author": "xixi048",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xixi048/feeling-search-mcp.git"
+  },
+  "homepage": "https://xiximm.cloud",
+  "bugs": {
+    "url": "https://github.com/xixi048/feeling-search-mcp/issues"
+  }
+}
