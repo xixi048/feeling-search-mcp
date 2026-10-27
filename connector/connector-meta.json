@@ -1,0 +1,21 @@
+{
+  "name": "感觉检索 · 美术对照表",
+  "name_zh": "感觉检索 · 美术对照表",
+  "name_en": "Feeling Search · Art Reference Chart",
+  "description": "Turn one colloquial sentence about a mood into the best-matching visual style, with the feeling words that triggered it and reference images.",
+  "description_zh": "输入一句口语化的感觉描述，检索出最匹配的视觉风格，并给出触发它的感受词、风格定义与参考图。适合美术定调、AI 绘画提示词与概念设计。",
+  "description_en": "Turn one colloquial sentence about a mood into the best-matching visual style from a Chinese art-reference lexicon, with the feeling words that triggered it, a one-line definition and reference images.",
+  "source": "feeling-search",
+  "type": "mcp",
+  "version": "1.0.2",
+  "examples_zh": [
+    "帮我找一种适合「雨夜便利店冷白灯光」的画风",
+    "这种感觉在美术上叫什么：孤独、安静、街头霓虹",
+    "给一个赛博朋克但不要太吵的方案，要湿冷、克制"
+  ],
+  "examples_en": [
+    "Find an art style for a rainy night outside a convenience store",
+    "What is the art term for lonely, quiet, neon-lit streets",
+    "A cyberpunk look that is wet and restrained, not loud"
+  ]
+}

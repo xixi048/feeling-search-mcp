@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "feeling-search": {
+      "type": "streamableHttp",
+      "url": "https://xiximm.cloud/mcp",
+      "timeout": 30000
+    }
+  }
+}
