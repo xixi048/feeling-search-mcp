@@ -15,7 +15,24 @@ dictionary, exposed over the Model Context Protocol.
 
 ## Install
 
-```jsonc
+Two ways, both are the whole setup — no API key, no account, no local data download.
+
+**Remote (no install, recommended)** — point the client at the endpoint:
+
+```json
+{
+  "mcpServers": {
+    "feeling-search": {
+      "type": "streamableHttp",
+      "url": "https://xiximm.cloud/mcp"
+    }
+  }
+}
+```
+
+**Local (stdio via npm)** — the few-KB bridge package:
+
+```json
 {
   "mcpServers": {
     "feeling-search": {
@@ -26,7 +43,9 @@ dictionary, exposed over the Model Context Protocol.
 }
 ```
 
-That is the whole setup — no API key, no account, no local data download.
+Machine-readable copy of both variants: [`mcp.json`](./mcp.json).
+Registry and directory crawlers can read that file directly instead of parsing this README.
+MCP 服务配置见仓库根的 `mcp.json`（远端 Streamable HTTP 与本地 stdio 两种写法都在里面）。
 
 ## Tools
 
@@ -52,6 +71,17 @@ matching logic live in exactly one place, so the package can never drift from th
 
 If you need a fully offline server, run the project's own `mcp/stdio.mjs` from a checkout
 with the data directory present.
+
+## Endpoint
+
+| Property | Value |
+|---|---|
+| Transport | Streamable HTTP (`sse` also accepted) |
+| URL | `https://xiximm.cloud/mcp` |
+| Auth | none — anonymous `initialize` and `tools/list` both succeed |
+| Tools | 5 (`word_analyze`, `word_lookup`, `word_list`, `style_get`, `word_status`) |
+| npm package | `feeling-search-mcp` |
+| MCP Registry name | `cloud.xiximm/feeling-search` |
 
 ## Configuration
 

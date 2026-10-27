@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "feeling-search": {
+      "type": "streamableHttp",
+      "url": "https://xiximm.cloud/mcp"
+    },
+    "feeling-search-local": {
+      "command": "npx",
+      "args": ["-y", "feeling-search-mcp"]
+    }
+  }
+}
