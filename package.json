@@ -2,7 +2,7 @@
   "name": "feeling-search-mcp",
   "version": "0.1.1",
   "mcpName": "cloud.xiximm/feeling-search",
-  "description": "MCP server for feeling-search: turn one colloquial sentence into 762 feeling words and 598 visual styles (commercial-grade art reference chart / art-style prompt encyclopedia).",
+  "description": "MCP server for feeling-search: one colloquial sentence in, the best-matching visual style out — a commercial-grade art reference chart and art-style prompt encyclopedia.",
   "type": "module",
   "bin": {
     "feeling-search-mcp": "bin/cli.mjs"

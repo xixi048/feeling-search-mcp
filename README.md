@@ -1,8 +1,8 @@
 # feeling-search-mcp
 
-> MCP server for [feeling-search](https://xiximm.cloud) — turn one colloquial sentence into
-> **762 feeling words** and **598 visual styles**, each style carrying its name, a one-line
-> definition and the words that triggered it.
+> MCP server for [feeling-search](https://xiximm.cloud) — turn one colloquial sentence into the
+> visual style that matches it best, plus the feeling words that led there. Every style carries
+> its name, a one-line definition and the words that triggered it.
 
 A commercial-grade art reference chart, art-style encyclopedia and art-style AI prompt
 dictionary, exposed over the Model Context Protocol.
@@ -32,11 +32,11 @@ That is the whole setup — no API key, no account, no local data download.
 
 | Tool | What it does | Cost |
 |---|---|---|
-| `word_analyze` | One sentence → feeling words + matching visual styles | free (local tier) |
+| `word_analyze` | One sentence → the best-matching visual styles + the feeling words behind them | free (local tier) |
 | `word_lookup` | Look up a single feeling word: definition, near-synonyms, landing styles | free |
-| `word_list` | Browse / search the 762-word lexicon | free |
+| `word_list` | Browse / search the full feeling-word lexicon | free |
 | `style_get` | One style in full: definition, parent style, member words, reference images | free |
-| `word_status` | Lexicon version, counts, coverage — use it to check the data is fresh | free |
+| `word_status` | Lexicon version, coverage — use it to check the data is fresh | free |
 
 Every tool is read-only and costs nothing. The paid `/v2/analyze` cloud path is **off by
 default** on the public endpoint and only runs when a caller explicitly opts in.
@@ -46,7 +46,7 @@ default** on the public endpoint and only runs when a caller explicitly opts in.
 This package is a thin stdio ↔ HTTP bridge to `https://xiximm.cloud/mcp`. The lexicon and
 matching logic live in exactly one place, so the package can never drift from the data:
 
-- **Nothing to download** — the package is a few KB; the 26 MB corpus stays server-side
+- **Nothing to download** — the package is a few KB; the whole corpus stays server-side
 - **Always current** — a lexicon update is live the moment the site deploys, no `npm update`
 - **Tiny audit surface** — no `eval`/`exec`/`subprocess`, no filesystem writes, one outbound host
 
