@@ -63,6 +63,23 @@ with the data directory present.
 
 `stdout` carries protocol messages only; all diagnostics go to `stderr`.
 
+## Reach & traffic
+
+One command checks every channel this package is listed on — npm downloads, GitHub traffic
+and referrers, MCP Registry versions, directory availability, and open PRs:
+
+```bash
+node scripts/traffic.mjs          # human-readable report
+node scripts/traffic.mjs --json   # machine-readable, for diffing over time
+```
+
+Requires the `gh` CLI to be logged in (GitHub traffic needs push permission on the repo).
+Mind the reporting lag: npm download stats appear 24–48h after the first publish, and
+GitHub traffic only covers the last 14 days.
+
+`referrers` is the useful signal for directories — it shows which registry actually sends
+visitors. Directory sites themselves publish no view counts.
+
 ## Related
 
 - Agent skill: [`xixi048/feeling-search-skill`](https://github.com/xixi048/feeling-search-skill) — same vocabulary, works offline from a local cache

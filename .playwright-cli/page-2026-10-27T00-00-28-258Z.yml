@@ -1,0 +1,171 @@
+- generic [ref=e1]:
+  - banner [ref=e2]:
+    - navigation "Primary navigation" [ref=e3]:
+      - generic [ref=e4]:
+        - link "MCP Servers" [ref=e5] [cursor=pointer]:
+          - /url: /zh-CN/
+        - generic [ref=e8]:
+          - link "首页" [ref=e9] [cursor=pointer]:
+            - /url: /zh-CN/
+          - link "远程服务器" [ref=e10] [cursor=pointer]:
+            - /url: /zh-CN/remote-mcp-servers
+          - link "主题" [ref=e11] [cursor=pointer]:
+            - /url: /zh-CN/topics
+          - link "Agent Skills" [ref=e12] [cursor=pointer]:
+            - /url: /zh-CN/agent-skills
+          - link "WebMCP" [ref=e13] [cursor=pointer]:
+            - /url: /zh-CN/webmcp
+          - link "博客" [ref=e14] [cursor=pointer]:
+            - /url: https://blog.mcpservers.org/
+      - generic [ref=e15]:
+        - button "简体中文" [ref=e17]
+        - generic [ref=e21]:
+          - link "广告" [ref=e22] [cursor=pointer]:
+            - /url: /zh-CN/advertise
+          - button "提交" [ref=e23] [cursor=pointer]
+  - main [ref=e24]:
+    - generic [ref=e25]:
+      - generic [ref=e26]:
+        - heading "提交你的 MCP 服务器" [level=1] [ref=e27]
+        - paragraph [ref=e28]: 在 mcpservers.org 上发布是免费的。你可以选择升级为付费提交。
+      - group "提交你的 MCP 服务器" [ref=e30]:
+        - generic [ref=e32]:
+          - generic [ref=e33]:
+            - group [ref=e34]:
+              - generic [ref=e35]: 服务器名称
+              - textbox "服务器名称" [active] [ref=e36]:
+                - /placeholder: 例如：Figma MCP
+                - text: Feeling Search
+            - group [ref=e37]:
+              - generic [ref=e38]: 分类
+              - combobox "分类" [ref=e40]:
+                - option "选择分类" [disabled]
+                - option "开发"
+                - option "生产力"
+                - option "数据库"
+                - option "搜索"
+                - option "网页抓取"
+                - option "文件系统"
+                - option "版本控制"
+                - option "通讯"
+                - option "云服务"
+                - option "云存储"
+                - option "营销"
+                - option "金融"
+                - option "设计" [selected]
+                - option "记忆"
+                - option "其他"
+          - group [ref=e41]:
+            - generic [ref=e42]: 简短描述
+            - textbox "简短描述" [ref=e43]:
+              - /placeholder: 你的服务器可以帮助用户做什么？
+          - group [ref=e44]:
+            - generic [ref=e45]: 源码仓库、网站或文档
+            - textbox "源码仓库、网站或文档" [ref=e46]:
+              - /placeholder: https://example.com/docs
+          - group [ref=e47]:
+            - generic [ref=e48]: 官方 MCP Registry 名称（可选）
+            - group [ref=e49]:
+              - textbox "官方 MCP Registry 名称（可选）" [ref=e50]:
+                - /placeholder: io.github.example/my-server
+              - group [ref=e51]
+          - group [ref=e53]:
+            - checkbox "此服务器支持远程连接" [ref=e151]
+            - checkbox [aria-hidden] [ref=e55]
+            - generic [ref=e56] [cursor=pointer]: 此服务器支持远程连接
+        - generic [ref=e57]:
+          - group [ref=e58]:
+            - generic [ref=e59]: 联系邮箱
+            - textbox "联系邮箱" [ref=e60]:
+              - /placeholder: you@example.com
+          - group [ref=e61]:
+            - radiogroup "提交方案" [ref=e63]:
+              - group [ref=e65] [cursor=pointer]:
+                - radio "免费提交" [checked] [ref=e66]
+                - radio [checked] [aria-hidden] [ref=e69]
+                - generic [ref=e70]:
+                  - generic [ref=e71]:
+                    - generic [ref=e72]: 免费提交
+                    - generic [ref=e73]: $0
+                  - list [ref=e75]:
+                    - listitem [ref=e76]:
+                      - generic [ref=e77]: 最长 2 周内完成审核。
+              - group [ref=e79] [cursor=pointer]:
+                - radio "付费提交" [ref=e80]
+                - radio [aria-hidden] [ref=e81]
+                - generic [ref=e82]:
+                  - generic [ref=e83]:
+                    - generic [ref=e84]: 付费提交
+                    - generic [ref=e85]:
+                      - generic [ref=e86]: $39
+                      - generic [ref=e87]: 一次性审核费用
+                  - list [ref=e88]:
+                    - listitem [ref=e89]:
+                      - generic [ref=e92]: 24 小时内完成审核。
+                    - listitem [ref=e93]:
+                      - generic [ref=e96]: 官方徽章，在站内搜索结果中优先展示。
+                    - listitem [ref=e97]:
+                      - generic [ref=e100]: Dofollow 链接 (DR 72)。
+        - button "提交" [ref=e101]
+  - contentinfo [ref=e102]:
+    - generic [ref=e103]:
+      - generic [ref=e104]:
+        - generic [ref=e105]:
+          - link "MCP Servers" [ref=e106] [cursor=pointer]:
+            - /url: /zh-CN/
+          - paragraph [ref=e109]: A directory of Model Context Protocol servers, clients, and guides for building with AI agents.
+        - generic [ref=e110]:
+          - navigation "Directory" [ref=e111]:
+            - heading "Directory" [level=2] [ref=e112]
+            - list [ref=e113]:
+              - listitem [ref=e114]:
+                - link "最新 MCP 服务器" [ref=e115] [cursor=pointer]:
+                  - /url: /zh-CN/all
+              - listitem [ref=e116]:
+                - link "官方 MCP 服务器" [ref=e117] [cursor=pointer]:
+                  - /url: /zh-CN/official
+              - listitem [ref=e118]:
+                - link "远程 MCP 服务器" [ref=e119] [cursor=pointer]:
+                  - /url: /zh-CN/remote-mcp-servers
+              - listitem [ref=e120]:
+                - link "WebMCP 目录" [ref=e121] [cursor=pointer]:
+                  - /url: /zh-CN/webmcp
+              - listitem [ref=e122]:
+                - link "MCP Clients" [ref=e123] [cursor=pointer]:
+                  - /url: /zh-CN/clients
+          - navigation "Learn" [ref=e124]:
+            - heading "Learn" [level=2] [ref=e125]
+            - list [ref=e126]:
+              - listitem [ref=e127]:
+                - link "什么是 MCP 服务器？" [ref=e128] [cursor=pointer]:
+                  - /url: /zh-CN/learn/what-is-an-mcp-server
+              - listitem [ref=e129]:
+                - link "什么是 WebMCP？" [ref=e130] [cursor=pointer]:
+                  - /url: /zh-CN/learn/what-is-webmcp
+              - listitem [ref=e131]:
+                - link "Chrome 中的 WebMCP" [ref=e132] [cursor=pointer]:
+                  - /url: /zh-CN/learn/chrome-webmcp
+              - listitem [ref=e133]:
+                - link "MCP Topics" [ref=e134] [cursor=pointer]:
+                  - /url: /zh-CN/topics
+              - listitem [ref=e135]:
+                - link "Claude Skills" [ref=e136] [cursor=pointer]:
+                  - /url: /zh-CN/agent-skills
+          - navigation "More" [ref=e137]:
+            - heading "More" [level=2] [ref=e138]
+            - list [ref=e139]:
+              - listitem [ref=e140]:
+                - link "提交" [ref=e141] [cursor=pointer]:
+                  - /url: /zh-CN/submit
+              - listitem [ref=e142]:
+                - link "广告" [ref=e143] [cursor=pointer]:
+                  - /url: /zh-CN/advertise
+              - listitem [ref=e144]:
+                - link "博客" [ref=e145] [cursor=pointer]:
+                  - /url: https://blog.mcpservers.org/
+              - listitem [ref=e146]:
+                - link "Codex Resets" [ref=e147] [cursor=pointer]:
+                  - /url: https://codex-resets.com/?utm_source=mcpservers&utm_medium=footer
+      - generic [ref=e148]:
+        - generic [ref=e149]: © 2026 mcpservers.org
+        - generic [ref=e150]: contact [at] mcpservers.org

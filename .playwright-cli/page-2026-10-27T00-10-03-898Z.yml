@@ -1,0 +1,250 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e4]:
+      - generic [ref=e5]: New
+      - link "MCP Market Hub" [ref=e6] [cursor=pointer]:
+        - /url: /zh/hub
+      - generic [ref=e7]: — Manage the skills and tools your agents use
+    - button "Dismiss banner" [ref=e8] [cursor=pointer]
+  - banner [ref=e12]:
+    - generic [ref=e14]:
+      - generic [ref=e15]:
+        - link "MCP Market" [ref=e16] [cursor=pointer]:
+          - /url: /zh
+          - generic [ref=e26]:
+            - generic [ref=e27]: MCP
+            - generic [ref=e28]: Market
+        - navigation "Main" [ref=e30]:
+          - list [ref=e32]:
+            - listitem [ref=e33]:
+              - button "MCP 服务器" [ref=e34] [cursor=pointer]
+            - listitem [ref=e46]:
+              - button "代理技能" [ref=e47] [cursor=pointer]
+      - generic [ref=e55]:
+        - link "出售技能" [ref=e56] [cursor=pointer]:
+          - /url: /zh/sell
+        - link "Power Your Agents" [ref=e57] [cursor=pointer]:
+          - /url: /zh/hub
+  - main [ref=e62]:
+    - generic [ref=e63]:
+      - generic [ref=e66]:
+        - generic [ref=e67]:
+          - heading "提交 MCP 和技能" [level=1] [ref=e68]
+          - paragraph [ref=e69]: 您有想要推荐的 MCP 服务器或 Agent 技能吗？请在下方提交相关的 GitHub 代码仓库，我们将审核其收录资格。
+        - generic [ref=e71]:
+          - generic [ref=e72]:
+            - term [ref=e73]: monthly visitors
+            - definition [ref=e74]: 1M+
+          - generic [ref=e75]:
+            - term [ref=e76]: MCP servers
+            - definition [ref=e77]: 35K+
+          - generic [ref=e78]:
+            - term [ref=e79]: agent skills
+            - definition [ref=e80]: 200K+
+      - generic [ref=e84]:
+        - tablist [ref=e86]:
+          - tab "MCP 服务器" [selected] [ref=e87] [cursor=pointer]
+          - tab "Agent 技能" [ref=e88] [cursor=pointer]
+        - generic [ref=e89]:
+          - radiogroup "Submission source" [ref=e90]:
+            - radio "GitHub repo" [checked] [ref=e91] [cursor=pointer]
+            - radio "Remote MCP" [ref=e92] [cursor=pointer]
+          - generic [ref=e93]:
+            - textbox "https://github.com/username/mcp-server" [ref=e98]
+            - paragraph [ref=e99]: 输入您要提交的 MCP 的 GitHub 代码仓库完整 URL
+            - textbox "Email address" [ref=e100]:
+              - /placeholder: you@example.com
+            - paragraph [ref=e101]: We'll email you the moment your listing goes live.
+            - generic [ref=e102]: Choose how it goes live
+            - radiogroup "Listing option" [ref=e105]:
+              - radio "Get Listed Now Recommended Put your listing in front of our 1M+ monthly visitors. $29 one-time Listed within 24 hours Official badge on your tile + page Add a “Try Now” link to your own site Try Now link (optional) Drives clicks from your listing to your site." [checked] [ref=e106] [cursor=pointer]:
+                - generic [ref=e107]:
+                  - generic [ref=e110]:
+                    - generic [ref=e111]:
+                      - generic [ref=e112]: Get Listed Now
+                      - generic [ref=e113]: Recommended
+                    - paragraph [ref=e114]: Put your listing in front of our 1M+ monthly visitors.
+                  - generic [ref=e115]:
+                    - text: $29
+                    - generic [ref=e116]: one-time
+                - list [ref=e117]:
+                  - listitem [ref=e118]: Listed within 24 hours
+                  - listitem [ref=e121]:
+                    - generic [ref=e124]:
+                      - generic [ref=e125]: Official
+                      - text: badge on your tile + page
+                  - listitem [ref=e126]: Add a “Try Now” link to your own site
+                - generic [ref=e129]:
+                  - generic [ref=e130]:
+                    - text: Try Now link
+                    - generic [ref=e131]: (optional)
+                  - textbox "Try Now link (optional)" [ref=e132]:
+                    - /placeholder: https://your-product.com/?ref=mcpmarket
+                  - paragraph [ref=e133]: Drives clicks from your listing to your site.
+              - radio "Free Queue Avg. 4–6 week listing time. $0 No Official badge Standard placement in listings No “Try Now” link to your site" [ref=e134] [cursor=pointer]:
+                - generic [ref=e135]:
+                  - generic [ref=e137]:
+                    - generic [ref=e138]: Free Queue
+                    - paragraph [ref=e140]: Avg. 4–6 week listing time.
+                  - generic [ref=e141]: $0
+                - list [ref=e142]:
+                  - listitem [ref=e143]: No Official badge
+                  - listitem [ref=e147]: Standard placement in listings
+                  - listitem [ref=e151]: No “Try Now” link to your site
+            - button "Get listed now" [ref=e155] [cursor=pointer]
+            - paragraph [ref=e159]: One-time payment · No subscription
+      - region [ref=e166]:
+        - generic [ref=e167]:
+          - heading "热门 MCP 服务器" [level=2] [ref=e168]
+          - paragraph [ref=e169]: 了解他人正在使用 MCP 构建什么
+        - generic [ref=e170]:
+          - generic [ref=e171]:
+            - link "Rank 1 morluto Reverse Engineer Anything Empower coding agents to deeply inspect and understand software applications, from high-level features down to their binary implementation. Developer Tools 385k" [ref=e172] [cursor=pointer]:
+              - /url: /zh/server/reverse-engineer-anything
+              - generic [ref=e175]:
+                - generic [ref=e177]:
+                  - generic "Rank 1" [ref=e178]: "#1"
+                  - img "morluto" [ref=e179]
+                  - heading "Reverse Engineer Anything" [level=3] [ref=e180]
+                - paragraph [ref=e184]: Empower coding agents to deeply inspect and understand software applications, from high-level features down to their binary implementation.
+                - generic [ref=e185]:
+                  - generic [ref=e186]: Developer Tools
+                  - generic [ref=e188]: 385k
+            - link "Rank 2 obra Superpowers Empowers AI coding agents with a comprehensive and structured software development workflow, from design refinement to TDD-driven implementation. Developer Tools 305k" [ref=e191] [cursor=pointer]:
+              - /url: /zh/server/superpowers
+              - generic [ref=e194]:
+                - generic [ref=e196]:
+                  - generic "Rank 2" [ref=e197]: "#2"
+                  - img "obra" [ref=e198]
+                  - heading "Superpowers" [level=3] [ref=e199]
+                - paragraph [ref=e203]: Empowers AI coding agents with a comprehensive and structured software development workflow, from design refinement to TDD-driven implementation.
+                - generic [ref=e204]:
+                  - generic [ref=e205]: Developer Tools
+                  - generic [ref=e207]: 305k
+            - link "Rank 3 koala73 World Monitor Provides real-time global intelligence through AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface. Data Science & ML 90k" [ref=e210] [cursor=pointer]:
+              - /url: /zh/server/world-monitor
+              - generic [ref=e213]:
+                - generic [ref=e215]:
+                  - generic "Rank 3" [ref=e216]: "#3"
+                  - img "koala73" [ref=e217]
+                  - heading "World Monitor" [level=3] [ref=e218]
+                - paragraph [ref=e222]: Provides real-time global intelligence through AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface.
+                - generic [ref=e223]:
+                  - generic [ref=e224]: Data Science & ML
+                  - generic [ref=e226]: 90k
+            - link "Rank 4 ruvnet Ruflo Orchestrates intelligent multi-agent swarms for Claude, coordinating autonomous workflows and building conversational AI systems. Developer Tools 79k" [ref=e229] [cursor=pointer]:
+              - /url: /zh/server/ruflo
+              - generic [ref=e232]:
+                - generic [ref=e234]:
+                  - generic "Rank 4" [ref=e235]: "#4"
+                  - img "ruvnet" [ref=e236]
+                  - heading "Ruflo" [level=3] [ref=e237]
+                - paragraph [ref=e241]: Orchestrates intelligent multi-agent swarms for Claude, coordinating autonomous workflows and building conversational AI systems.
+                - generic [ref=e242]:
+                  - generic [ref=e243]: Developer Tools
+                  - generic [ref=e245]: 79k
+            - link "Rank 5 Fission-AI OpenSpec Facilitates spec-driven development to ensure alignment between humans and AI coding assistants before any code is written. Developer Tools 73k" [ref=e248] [cursor=pointer]:
+              - /url: /zh/server/openspec
+              - generic [ref=e251]:
+                - generic [ref=e253]:
+                  - generic "Rank 5" [ref=e254]: "#5"
+                  - img "Fission-AI" [ref=e255]
+                  - heading "OpenSpec" [level=3] [ref=e256]
+                - paragraph [ref=e260]: Facilitates spec-driven development to ensure alignment between humans and AI coding assistants before any code is written.
+                - generic [ref=e261]:
+                  - generic [ref=e262]: Developer Tools
+                  - generic [ref=e264]: 73k
+            - link "Rank 6 upstash Context7 Fetches up-to-date documentation and code examples for LLMs and AI code editors directly from the source. API Development 64k" [ref=e267] [cursor=pointer]:
+              - /url: /zh/server/context7-1
+              - generic [ref=e270]:
+                - generic [ref=e272]:
+                  - generic "Rank 6" [ref=e273]: "#6"
+                  - img "upstash" [ref=e274]
+                  - heading "Context7" [level=3] [ref=e275]
+                - paragraph [ref=e279]: Fetches up-to-date documentation and code examples for LLMs and AI code editors directly from the source.
+                - generic [ref=e280]:
+                  - generic [ref=e281]: API Development
+                  - generic [ref=e283]: 64k
+          - link "浏览所有 MCP 服务器" [ref=e287] [cursor=pointer]:
+            - /url: /zh/server
+  - contentinfo [ref=e290]:
+    - generic [ref=e292]:
+      - generic [ref=e293]:
+        - generic [ref=e294]:
+          - generic [ref=e305]:
+            - generic [ref=e306]: MCP
+            - generic [ref=e307]: Market
+          - paragraph [ref=e308]: 发现可将 Claude 和 Cursor 等 MCP 客户端连接到您喜爱工具的 MCP 服务器。浏览 MCP 市场开始使用。
+        - generic [ref=e309]:
+          - heading "浏览" [level=4] [ref=e310]
+          - list [ref=e311]:
+            - listitem [ref=e312]:
+              - link "MCP 搜索" [ref=e313] [cursor=pointer]:
+                - /url: /zh/search
+            - listitem [ref=e314]:
+              - link "MCP 服务器" [ref=e315] [cursor=pointer]:
+                - /url: /zh/server
+            - listitem [ref=e316]:
+              - link "MCP 客户端" [ref=e317] [cursor=pointer]:
+                - /url: /zh/client
+            - listitem [ref=e318]:
+              - link "Claude 技能" [ref=e319] [cursor=pointer]:
+                - /url: /zh/tools/skills
+            - listitem [ref=e320]:
+              - link "MCP Market Hub" [ref=e321] [cursor=pointer]:
+                - /url: /zh/hub
+            - listitem [ref=e322]:
+              - link "分类" [ref=e323] [cursor=pointer]:
+                - /url: /zh/categories
+            - listitem [ref=e324]:
+              - link "什么是 MCP 服务器?" [ref=e325] [cursor=pointer]:
+                - /url: /zh/what-is-an-mcp-server
+            - listitem [ref=e326]:
+              - link "什么是 WebMCP?" [ref=e327] [cursor=pointer]:
+                - /url: /zh/what-is-webmcp
+            - listitem [ref=e328]:
+              - link "Model Context Protocol" [ref=e329] [cursor=pointer]:
+                - /url: https://modelcontextprotocol.io
+        - generic [ref=e330]:
+          - heading "排行榜" [level=4] [ref=e331]
+          - list [ref=e332]:
+            - listitem [ref=e333]:
+              - link "今日热门 MCP" [ref=e334] [cursor=pointer]:
+                - /url: /zh/daily
+            - listitem [ref=e335]:
+              - link "今日热门 Claude 技能" [ref=e336] [cursor=pointer]:
+                - /url: /zh/daily/skills
+            - listitem [ref=e337]:
+              - link "Claude 技能 Top 100" [ref=e338] [cursor=pointer]:
+                - /url: /zh/tools/skills/leaderboard
+            - listitem [ref=e339]:
+              - link "MCP 服务器 Top 100" [ref=e340] [cursor=pointer]:
+                - /url: /zh/leaderboards
+        - generic [ref=e341]:
+          - heading "关于" [level=4] [ref=e342]
+          - list [ref=e343]:
+            - listitem [ref=e344]:
+              - link "新闻" [ref=e345] [cursor=pointer]:
+                - /url: /zh/news
+            - listitem [ref=e346]:
+              - button "Open newsletter signup modal" [ref=e347] [cursor=pointer]: 订阅我们的新闻通讯
+            - listitem [ref=e348]:
+              - link "提交" [ref=e349] [cursor=pointer]:
+                - /url: /zh/submit
+            - listitem [ref=e350]:
+              - button "Open advertising information modal" [ref=e351] [cursor=pointer]: 与我们合作投放广告
+            - listitem [ref=e352]:
+              - button "Open affiliate program signup modal" [ref=e353] [cursor=pointer]: 联盟伙伴
+            - listitem [ref=e354]:
+              - link "联系我们" [ref=e355] [cursor=pointer]:
+                - /url: mailto:support@mcpmarket.com
+      - generic [ref=e356]:
+        - button "Switch language" [ref=e358] [cursor=pointer]
+        - paragraph [ref=e363]:
+          - text: © 2026 MCP 市场。保留所有权利。·
+          - link "Privacy" [ref=e364] [cursor=pointer]:
+            - /url: /zh/privacy
+          - text: ·
+          - link "Terms" [ref=e365] [cursor=pointer]:
+            - /url: /zh/terms
+  - alert [ref=e366]
