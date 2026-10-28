@@ -1,6 +1,6 @@
 {
   "name": "feeling-search-mcp",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "mcpName": "cloud.xiximm/feeling-search",
   "description": "MCP server for feeling-search: one colloquial sentence in, the best-matching visual style out — a commercial-grade art reference chart and art-style prompt encyclopedia.",
   "type": "module",
