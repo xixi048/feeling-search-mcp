@@ -101,6 +101,11 @@ Both Chinese and English sentences are accepted.
 All tools are read-only and free. The paid cloud path (`allow_cloud: true`) is off by default
 and costs money per call — never set it during install testing.
 
+> **Upstream pricing status (2026-10-28): the cloud path is currently free.** The service is in a
+> free traffic-building period, so no `402` is returned. This does not change the guidance above:
+> **keep install testing on the free local tier.** The paid 402 / x402 flow is preserved upstream
+> and may be switched back on at any time.
+
 ---
 
 ## Troubleshooting

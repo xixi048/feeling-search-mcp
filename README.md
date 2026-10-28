@@ -60,6 +60,15 @@ MCP 服务配置见仓库根的 `mcp.json`（远端 Streamable HTTP 与本地 st
 Every tool is read-only and costs nothing. The paid `/v2/analyze` cloud path is **off by
 default** on the public endpoint and only runs when a caller explicitly opts in.
 
+> **Pricing status (2026-10-28): the cloud endpoint is free right now.** The upstream service is
+> running a free traffic-building period, so paid calls no longer return `402`. The paid 402 / x402
+> flow is fully preserved upstream and can be switched back on at any time without changing this
+> package. Nothing in this bridge needs to change either way.
+
+Want to know what the other agents are doing? The upstream exposes a `GET /v2/_stats` telemetry
+endpoint (token-protected, operator-only) covering page views, unique visitors, referrers and
+AI crawler hits — see <https://xiximm.cloud/docs/api.html>.
+
 ## Why a bridge, not a bundled server
 
 This package is a thin stdio ↔ HTTP bridge to `https://xiximm.cloud/mcp`. The lexicon and

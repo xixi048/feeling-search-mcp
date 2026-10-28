@@ -94,6 +94,9 @@ python scripts/fs_api.py analyze "<文本>" --allow-cloud
 没配 `FS_QUOTA` 时付费端点会被 402 拦下，脚本会明确报 `payment_required` 并提示改走免费端点，
 **不会静默失败、也不会把本地结果伪装成云端结果**（`source` 只有 `local` / `cloud` 两个值）。
 
+> **上游计费状态（2026-10-28）：云端当前免费。** 服务端处于免费跑量阶段，不再返回 402，
+> `FS_QUOTA` 可以不配。上述行为与报错码原样保留；计费切回后无需改动本 skill。
+
 ### Step 4 · 顺着结果深挖（全部免费）
 
 ```bash
