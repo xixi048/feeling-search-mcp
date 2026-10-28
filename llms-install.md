@@ -115,4 +115,4 @@ and costs money per call — never set it during install testing.
 | `fetch failed` / connection refused | Confirm `curl -s -o /dev/null -w "%{http_code}" https://xiximm.cloud/mcp` returns `200` |
 | `initialize` succeeds but `tools/list` returns `[]` | Client cached an old handshake — restart the MCP server entry |
 | npx path fails behind a proxy | Use Option A (remote), or set `HTTP_PROXY` before launching |
-| Tool call returns a 402 | `allow_cloud` was set to `true` without quota. Drop the flag; the local tier is free |
+| Tool call returns a 402 | Only happens when the operator turned billing on (`FS_PAID=1`): `allow_cloud: true` without quota. Drop the flag (local tier is free) or pass `quota`. **Free phase (default) never returns 402** |
