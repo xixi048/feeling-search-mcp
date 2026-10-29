@@ -82,7 +82,7 @@ personal data) — see <https://xiximm.cloud/docs/api.html>.
 | Layer | When it runs | Latency | What it returns |
 |---|---|---|---|
 | **Lexicon** (`source: "local"`) | The sentence contains 2+ lexicon words | ~10 ms | Exact feeling words, each with its landing styles |
-| **Semantic engine** (`source: "engine"`) | The lexicon hits 0–1 words — i.e. it didn't really understand the sentence | ~25 ms | 27 coarse anchors + styles ranked by cosine against 598 style vectors |
+| **Semantic engine** (`source: "engine"`) | The lexicon hits 0–1 words — i.e. it didn't really understand the sentence | ~25 ms | Real words from the 762-entry lexicon (cosine against 762 word vectors) + styles ranked against 598 style vectors |
 | **Cloud** (`source: "cloud"`) | Only on the remote endpoint, and only with `allow_cloud: true` | 0.8–1.6 s | Paid fallback |
 
 Two engines, picked by language:
