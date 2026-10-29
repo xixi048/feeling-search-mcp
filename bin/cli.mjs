@@ -235,6 +235,7 @@ if (args.selfTest) {
     const r = await mod.callTool('word_analyze', a);
     const body = JSON.parse(r.content[0].text);
     log(`${label.padEnd(10)} ${String(Date.now() - t).padStart(4)}ms  source=${body.source} engine=${body.engine || '-'} ` +
+        `words=${body.words_source || '-'} ` +
         `词=${(body.words || []).slice(0, 3).map((w) => w.w).join('/') || '空'} ` +
         `风格=${(body.styles || []).slice(0, 2).map((s) => s.name).join('/') || '空'}`);
   }
