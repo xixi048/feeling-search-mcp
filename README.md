@@ -15,22 +15,10 @@ dictionary, exposed over the Model Context Protocol.
 
 ## Install
 
-Two ways, both are the whole setup — no API key, no account, no local data download.
+Two shapes. Neither needs an account or an API key.
 
-**Remote (no install, recommended)** — point the client at the endpoint:
-
-```json
-{
-  "mcpServers": {
-    "feeling-search": {
-      "type": "streamableHttp",
-      "url": "https://xiximm.cloud/mcp"
-    }
-  }
-}
-```
-
-**Local (stdio via npm)** — the few-KB bridge package:
+**Local (default, recommended)** — the package now ships the whole thing: 762-word lexicon,
+the 598-style index, and **both** semantic engines. It runs offline.
 
 ```json
 {
@@ -43,15 +31,33 @@ Two ways, both are the whole setup — no API key, no account, no local data dow
 }
 ```
 
+First `npx` run downloads ~21 MB (the two engines are 8 MB zh + 10 MB en). After that:
+lexicon hits answer in ~10 ms, whole-sentence queries in ~25 ms, all on your machine.
+
+**Remote (no download)** — point the client at the endpoint:
+
+```json
+{
+  "mcpServers": {
+    "feeling-search": {
+      "type": "streamableHttp",
+      "url": "https://xiximm.cloud/mcp"
+    }
+  }
+}
+```
+
+Or keep the local install but forward: `npx feeling-search-mcp --remote`. Remote answers in
+0.76–1.64 s (network round trip + cold start), local in 10–90 ms, and local never sends your
+text anywhere.
+
 Machine-readable copy of both variants: [`mcp.json`](./mcp.json).
-Registry and directory crawlers can read that file directly instead of parsing this README.
-MCP 服务配置见仓库根的 `mcp.json`（远端 Streamable HTTP 与本地 stdio 两种写法都在里面）。
 
 ## Tools
 
 | Tool | What it does | Cost |
 |---|---|---|
-| `word_analyze` | One sentence → the best-matching visual styles + the feeling words behind them | free (local tier) |
+| `word_analyze` | One sentence → the best-matching visual styles + the feeling words behind them. `source` tells you which layer answered (`local` lexicon / `engine` semantic model / `cloud` fallback) | free, offline |
 | `word_lookup` | Look up a single feeling word: definition, near-synonyms, landing styles | free |
 | `word_list` | Browse / search the full feeling-word lexicon | free |
 | `style_get` | One style in full: definition, parent style, member words, reference images | free |
@@ -69,17 +75,38 @@ Want to know how much traffic the lexicon is getting? The upstream exposes a pub
 `GET /v2/stats` telemetry endpoint (page views, unique visitors, referrers, AI crawler hits, no
 personal data) — see <https://xiximm.cloud/docs/api.html>.
 
-## Why a bridge, not a bundled server
+## Two layers, and which one answers
 
-This package is a thin stdio ↔ HTTP bridge to `https://xiximm.cloud/mcp`. The lexicon and
-matching logic live in exactly one place, so the package can never drift from the data:
+`word_analyze` only escalates when it has to:
 
-- **Nothing to download** — the package is a few KB; the whole corpus stays server-side
-- **Always current** — a lexicon update is live the moment the site deploys, no `npm update`
-- **Tiny audit surface** — no `eval`/`exec`/`subprocess`, no filesystem writes, one outbound host
+| Layer | When it runs | Latency | What it returns |
+|---|---|---|---|
+| **Lexicon** (`source: "local"`) | The sentence contains 2+ lexicon words | ~10 ms | Exact feeling words, each with its landing styles |
+| **Semantic engine** (`source: "engine"`) | The lexicon hits 0–1 words — i.e. it didn't really understand the sentence | ~25 ms | 27 coarse anchors + styles ranked by cosine against 598 style vectors |
+| **Cloud** (`source: "cloud"`) | Only on the remote endpoint, and only with `allow_cloud: true` | 0.8–1.6 s | Paid fallback |
 
-If you need a fully offline server, run the project's own `mcp/stdio.mjs` from a checkout
-with the data directory present.
+Two engines, picked by language:
+
+- **Chinese** — ask in whole Chinese sentences. Any Han character makes it the Chinese engine;
+  don't mix, e.g. `有点 lonely 的雨夜` gets shredded by the Chinese tokenizer.
+- **English** — ask in whole English sentences. `moody rainy night in old Hong Kong`.
+- Force one with `lang: "zh" | "en"`; default is `auto`.
+
+Negation is computed outside the model and is deterministic: `不要压抑` drops 压抑 and demotes
+every style that carries it, on both layers.
+
+## What's in the package
+
+| Path | Size | Why |
+|---|---|---|
+| `data/src/words.json`, `data/standards/*.json` | ~2 MB | Lexicon, 598 styles, aliases, version |
+| `data/standards/zh-engine/` | 8.1 MB | Chinese ternary engine (wasm core + weights) |
+| `data/standards/ternlight/` | 9.8 MB | English engine (wasm, weights embedded) |
+| `data/standards/idx/` | 0.9 MB | 598 style vectors, per language, int8 |
+| `lib/` | <100 KB | Tool definitions, engine loader, lexicon |
+
+Everything is generated from the upstream repo by `deploy/pack-mcp.mjs`, which also runs a
+`--check` drift comparison — the package can't silently fall behind the data.
 
 ## Endpoint
 
@@ -99,6 +126,8 @@ with the data directory present.
 | `FS_MCP_URL` / `--endpoint` | `https://xiximm.cloud/mcp` | Endpoint to bridge to |
 | `FS_MCP_TOKEN` | unset | Sent as `Authorization: Bearer <token>` when the endpoint is gated |
 | `--timeout` | `30000` | Per-request timeout in ms |
+| `--remote` | off | Forward to the endpoint instead of running locally |
+| `--data <dir>` / `FS_DATA_ROOT` | package `data/` | Where the lexicon and engines live |
 
 `stdout` carries protocol messages only; all diagnostics go to `stderr`.
 
