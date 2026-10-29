@@ -7,7 +7,7 @@
   "description_en": "Turn one colloquial sentence about a mood into the best-matching visual style from a Chinese art-reference lexicon, with the feeling words that triggered it, a one-line definition and reference images.",
   "source": "feeling-search",
   "type": "mcp",
-  "version": "1.0.2",
+  "version": "1.2.0",
   "examples_zh": [
     "帮我找一种适合「雨夜便利店冷白灯光」的画风",
     "这种感觉在美术上叫什么：孤独、安静、街头霓虹",
