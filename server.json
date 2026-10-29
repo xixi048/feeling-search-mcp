@@ -3,7 +3,7 @@
   "name": "cloud.xiximm/feeling-search",
   "title": "Feeling Search — Art Style Reference & Prompt Encyclopedia",
   "description": "One sentence in, the best-matching visual style out: art reference chart and prompt encyclopedia.",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "websiteUrl": "https://xiximm.cloud",
   "repository": {
     "url": "https://github.com/xixi048/feeling-search-mcp",
@@ -14,7 +14,7 @@
       "registryType": "npm",
       "registryBaseUrl": "https://registry.npmjs.org",
       "identifier": "feeling-search-mcp",
-      "version": "0.2.3",
+      "version": "0.2.4",
       "transport": {
         "type": "stdio"
       }
