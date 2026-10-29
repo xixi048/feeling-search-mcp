@@ -1,6 +1,6 @@
 {
   "name": "feeling-search-mcp",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "mcpName": "cloud.xiximm/feeling-search",
   "description": "MCP server for feeling-search: one colloquial sentence in, the best-matching visual style out. Runs fully local (762-word lexicon + Chinese/English semantic engines), no network, no API key.",
   "type": "module",
